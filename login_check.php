@@ -19,6 +19,7 @@ if($result->num_rows==1){
 	}
 }
 else{
+$_SESSION['check']='false';
 header('Location: ./login.php');
 }
 ?>

@@ -21,4 +21,6 @@ if($result->num_rows==1){
 }
 $check_query="INSERT INTO member (id,password,name,age,email) VALUES('$id','$pw','$name','$age','$email')";
 $row=mysqli_query($mysqli, $check_query);
+$_SESSION['check']='true';
+header('Location: ./login.php');
 ?>
