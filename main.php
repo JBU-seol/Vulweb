@@ -1,11 +1,3 @@
-<?php
-session_start();
-if(!$_SESSION['userid']){
-	header('Location: ./login.php');
-}
-echo "<h1>ID : ".$_SESSION['userid']."<br /></h1>";
-?>
-
 <html>
 <head>
         <meta charset = 'utf-8'>
@@ -46,12 +38,18 @@ echo "<h1>ID : ".$_SESSION['userid']."<br /></h1>";
 </style>
 <body>
 <?php
-                $connect = mysqli_connect('localhost', 'root', 'toor1234', 'vul_test');
-                $query ="select * from board order by num desc";
-                $result = $connect->query($query);
-                $total = mysqli_num_rows($result);
+	session_start();
+	if(!$_SESSION['userid']){
+		header('Location: ./login.php');
+	}
+	echo "<h1>ID : ".$_SESSION['userid']."<br /></h1>";
+        $mysqli = mysqli_connect('localhost', 'root', 'toor1234', 'vul_test');
+        $check_query ="select * from board order by num desc";
+        $result = mysqli_query($mysqli,$check_query);
+        $total = mysqli_num_rows($result);
  
         ?>
+	<button type="button" onclick="location.href='./unset.php'">로그아웃</button>
         <h2 align=center>게시판</h2>
         <table align = center>
         <thead align = "center">
