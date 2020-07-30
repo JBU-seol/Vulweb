@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); 
 $id=$_POST['id'];
 $pw=$_POST['pw'];
 $mysqli=mysqli_connect("localhost","root","toor1234","vul_test");
