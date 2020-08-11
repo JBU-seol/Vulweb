@@ -102,7 +102,7 @@ width: 500px;
  
         <div class="view_btn">
                 <button class="view_btn1" onclick="location.href='./main.php'">목록으로</button>
-                <button class="view_btn1" onclick="location.href='./modify.php?num=<?=$number?>&id=<?=$_SESSION['userid']?>'">수정</button>
+                <button class="view_btn1" onclick="location.href='./modify_post.php?num=<?=$number?>&id=<?=$_SESSION['userid']?>'">수정</button>
  
                 <button class="view_btn1" onclick="location.href='./delete.php?num=<?=$number?>&id=<?=$_SESSION['userid']?>'">삭제</button>
         </div>

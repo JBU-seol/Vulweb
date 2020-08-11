@@ -60,7 +60,7 @@
 	<?php
 		echo "<h1 class='sessionid'>ID: ".$_SESSION['userid']."<br /></h1>";
 	?>
-	<button type="button" onclick="location.href='./info_modify.php'">정보수정</button>
+	<button type="button" onclick="location.href='./modify_info.php'">정보수정</button>
 	<button type="button" onclick="location.href='./unset.php'">로그아웃</button>
         </div>
 	<h2 align=center>게시판</h2>
