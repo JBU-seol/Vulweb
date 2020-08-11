@@ -14,7 +14,7 @@ if($_SESSION['check']=='false'){
 <div class="wrapper fadeInDown">
   <div id="formContent">
     <h2 class="active"> Sign In </h2>
-    <a href="signup.html"><h2 class="inactive underlineHover">Sign Up</h2></a>
+    <a href="signup.php"><h2 class="inactive underlineHover">Sign Up</h2></a>
     <div class="fadeIn first">
       <img src="https://www.kitribob.kr/static/front/images/about/bob-logo.png" id="icon" alt="User Icon" />
     </div>
