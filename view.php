@@ -47,6 +47,12 @@ padding-top: 20px;
 border-top: 1px solid #444444;
 height: 500px;
 }
+
+.like_btn {
+text-align: center;
+margin-top: 15px;
+}
+
 .view_btn {
 width: 700px;
 height: 200px;
@@ -92,13 +98,20 @@ width: 500px;
                 <td class="view_hit">조회수</td>
                 <td class="view_hit2"><?php echo $rows['hit']?></td>
         </tr>
- 
- 
+	</tr>
+		<td class="view_id">파일</td>  
+		<td class="view_id2"><a href="./download.php?fn=<?=$rows['file']?>"><?php echo $rows['file']?></a></td>
+		<td class="view_hit">좋아요</td>
+		<td class="view_hit2"><?php echo $rows['likehit']?></td>
+ 	</tr>
         <tr>
                 <td colspan="4" class="view_content" valign="top">
                 <?php echo $rows['content']?></td>
         </tr>
         </table>
+	<div class="like_btn">
+	 <button class="view_btn1" onclick="location.href='./likehit.php?num=<?php echo $rows['num']?>'">좋아요</button>
+	</div>
  
         <div class="view_btn">
                 <button class="view_btn1" onclick="location.href='./main.php'">목록으로</button>

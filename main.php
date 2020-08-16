@@ -70,8 +70,9 @@
         <td width = "50" align="center">번호</td>
         <td width = "500" align = "center">제목</td>
         <td width = "100" align = "center">작성자</td>
-        <td width = "200" align = "center">날짜</td>
+        <td width = "150" align = "center">날짜</td>
         <td width = "50" align = "center">조회수</td>
+	<td width = "50" align = "center">좋아요</td>
         </tr>
         </thead>
  
@@ -89,8 +90,9 @@
                 <a href = "view.php?num=<?php echo $rows['num']?>">
                 <?php echo $rows['title']?></td>
                   <td width = "100" align = "center"><?php echo $rows['name']?></td>
-                <td width = "200" align = "center"><?php echo $rows['date']?></td>
+                <td width = "150" align = "center"><?php echo $rows['date']?></td>
                 <td width = "50" align = "center"><?php echo $rows['hit']?></td>
+		<td width = "50" align = "center"><?php echo $rows['likehit']?></td> 
                 </tr>
         <?php
                 $total--;

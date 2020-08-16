@@ -41,7 +41,7 @@
                 }
         ?>
 
-        <form method = "post" action = "write_action.php">
+        <form method = "post" action = "write_action.php" enctype="multipart/form-data">
         <table  style="padding-top:50px" align = center width=900 border=0 cellpadding=2 >
                 <tr>
                 <td height=20 align= center bgcolor=#ccc><font color=white> 글쓰기</font></td>
@@ -56,22 +56,25 @@
  
                         <tr>
                         <td>제목</td>
-                        <td><input type = text name = title size=60></td>
+                        <td><input type = text name = "title" size=60></td>
                         </tr>
- 
+			<tr>
+			<td>파일</td>
+			<td><input type="file" name="fileToUpload" id="fileToUpload"></td>
+			</tr> 
                         <tr>
                         <td>내용</td>
-                        <td><textarea name = content cols=85 rows=15></textarea></td>
+                        <td><textarea name = "content" cols=85 rows=15></textarea></td>
                         </tr>
  
                         <tr>
                         <td>비밀번호</td>
-                        <td><input type = password name = pw size=10 maxlength=10></td>
+                        <td><input type = password name = "pw" size=10 maxlength=10></td>
                         </tr>
                         </table>
  
                         <center>
-                        <input type = "submit" value="작성">
+                        <input type = "submit" value="작성" name="submit">
                         </center>
                 </td>
                 </tr>
